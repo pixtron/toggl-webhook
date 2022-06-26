@@ -31,3 +31,7 @@ const subscription = await client.createSubscription({
   enabled: true
 });
 ```
+
+## API docs
+
+See the [API docs](https://pixtron.github.io/toggl-webhook/).
