@@ -8,8 +8,7 @@
   "scripts": {
     "start": "tsc -w",
     "tsc": "tsc -d",
-    "clean": "rm -rf ./dist",
-    "prepack": "npm run build",
+    "clean": "rm -rf ./dist ./docs",
     "docs:build": "typedoc",
     "validations": "npm run validations:build && npm run validations:copy",
     "validations:build": "node scripts/build-json-schemas.js build",
