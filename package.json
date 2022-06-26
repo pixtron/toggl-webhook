@@ -1,0 +1,57 @@
+{
+  "name": "toggl-webhook",
+  "version": "1.0.0",
+  "description": "Wrapper for toggl webhook api v1",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "tsc -w",
+    "tsc": "tsc -d",
+    "clean": "rm -rf ./dist",
+    "prepack": "npm run build",
+    "docs:build": "typedoc",
+    "validations": "npm run validations:build && npm run validations:copy",
+    "validations:build": "node scripts/build-json-schemas.js build",
+    "validations:copy": "node scripts/build-json-schemas.js copy",
+    "build": "npm run clean && npm run lint && npm run validations:build && npm run tsc && npm run validations:copy && npm run docs:build",
+    "lint": "eslint . --ext .ts --report-unused-disable-directives",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixtron/toggl-webhook.git"
+  },
+  "keywords": [
+    "toggl",
+    "webhook api v1"
+  ],
+  "author": "Stefan Aebischer <os@pixtron.ch> (https://pixtron.ch)",
+  "bugs": {
+    "url": "https://github.com/pixtron/toggl-webhook/issues"
+  },
+  "homepage": "https://github.com/pixtron/toggl-webhook#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "^3.0.1",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "ajv": "^8.11.0",
+    "ajv-formats": "^2.1.1",
+    "esbuild": "^0.14.45",
+    "eslint": "^8.17.0",
+    "ts-json-schema-generator": "^1.0.0",
+    "typedoc": "^0.22.17",
+    "typescript": "^4.7.3"
+  },
+  "engines": {
+    "node": ">=14.16"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "got": "^12.1.0"
+  }
+}

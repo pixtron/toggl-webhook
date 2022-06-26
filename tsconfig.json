@@ -1,0 +1,19 @@
+{
+	"extends": "@sindresorhus/tsconfig",
+  "compileOnSave": true,
+  "compilerOptions": {
+		"outDir": "dist",
+		"target": "es2020",
+		"lib": [
+			"es2020"
+		],
+		"removeComments": true
+	},
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "coverage",
+    "doc"
+  ]
+}

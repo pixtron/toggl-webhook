@@ -1,0 +1,4 @@
+/dist
+/node_modules
+/scripts
+/src/api/v1/schemas/validations.*
