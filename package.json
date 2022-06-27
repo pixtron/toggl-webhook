@@ -1,6 +1,6 @@
 {
   "name": "toggl-webhook",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper for toggl webhook api v1",
   "type": "module",
   "exports": "./dist/index.js",
