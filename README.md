@@ -14,7 +14,7 @@ npm install --save toggl-webhook
 
 ## Usage
 
-```
+```ts
 import { TogglWebhookClient } from 'toggl-webhook';
 
 const client = new TogglWebhookClient({
@@ -35,3 +35,7 @@ const subscription = await client.createSubscription({
 ## API docs
 
 See the [API docs](https://pixtron.github.io/toggl-webhook/).
+
+## Recieve and validate webhook events with express
+
+[toggl-webhook-express](https://www.npmjs.com/package/toggl-webhook-express) provides a middleware to validate incoming toggl webhook requests.
